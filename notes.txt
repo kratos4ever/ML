@@ -1,0 +1,58 @@
+1. worked on machine learning projects for image recognition, twitter sentiment analysis etc
+python - sklearn - text classification
+
+DecisionTree classifiers
+Naive Baayes classifiers
+
+
+
+Reduce AHT by tapping into chat and voice -> Promote new products to customer -> 
+
+SMART help -> 
+
+Sentiment analysis
+Graph database
+Home agent chat support queue -> xmpp chat -> plugin -> sentiment analysis
+
+Voice - csat metrics -> quality assurance analysis
+
+Service bots to reset passwords
+
+
+Convergys Now -> 
+
+Big Data -> Data lake. Chat conversations, IIS logs/system logs/usage logs, 
+
+qubole -> 
+
+app interacts with any app in your desktop - does remote desktop - RPA, citrix -> 
+
+SOA - integration hub/service bus
+
+Venkat/ team.
+
+
+Home agents/time mitchell/
+
+asterix open source pbx systems
+
+========================
+
+Image and text recognition/ Brijaesh text recognition - Automation
+
+Uday -> image -> citrix optimization.
+
+Sameer -> password reset -> with a chat bot. 
+
+==================================
+
+1. Input -> Create a set of images which fall under, Clean desk(nothing else on the desk except for keyboard and mouse), Violation(cell phone, pen, paper, food, mug, other electronic devices)
+2. Output -> Recognize the facial, categorize desk as clean or not clean, categorize the agent behavior as working, not working.
+
+
+
+
+select count(payroll) from emp_organization where (regexp_like (station,'^009[0-9][0-9]$') or station = '00802') and eff_from_date <= sysdate and eff_to_date >= sysdate
+and upper(class) not in ('Z','Y')
+
+
