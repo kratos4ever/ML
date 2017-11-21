@@ -19,10 +19,97 @@ python -m scripts.retrain ^
   --bottleneck_dir=tf_files/bottlenecks ^
   --how_many_training_steps=500 ^
   --model_dir=tf_files/models/ ^
-  --summaries_dir=tf_files/training_summaries/"${ARCHITECTURE}" ^
+  --summaries_dir=tf_files/training_summaries/"%ARCHITECTURE%" ^
   --output_graph=tf_files/retrained_graph.pb ^
   --output_labels=tf_files/retrained_labels.txt ^
-  --architecture="${ARCHITECTURE}" ^
+  --architecture="%ARCHITECTURE%" ^
   --image_dir=tf_files/flower_photos
 
 
+# After the retraining of the model with the above command - finally run the image_label.py using the below command to label an image
+
+python -m  scripts.label_image -h
+
+
+sample commands to label new images ->
+
+python -m scripts.label_image ^
+    --graph=tf_files/retrained_graph.pb  ^
+    --image=tf_files/flower_photos/daisy/21652746_cc379e0eea_m.jpg
+
+
+python -m scripts.label_image ^
+    --graph=tf_files/retrained_graph.pb  ^
+    --image=tf_files/flower_photos/roses/2414954629_3708a1a04d.jpg
+
+    ==========================================================
+
+
+Retrain for the test agent images
+
+
+python -m scripts.retrain ^
+  --bottleneck_dir=tf_files/bottlenecks ^
+  --how_many_training_steps=500 ^
+  --model_dir=tf_files/models/ ^
+  --summaries_dir=tf_files/training_summaries/"%ARCHITECTURE%" ^
+  --output_graph=tf_files/agent_desk_v1_graph.pb ^
+  --output_labels=tf_files/agent_desk_v1_labels.txt ^
+  --architecture="%ARCHITECTURE%" ^
+  --image_dir=tf_files/agent_desk_v1
+
+
+python -m scripts.label_image ^
+    --graph=tf_files/agent_desk_v1_graph.pb  ^
+    --labels=tf_files/agent_desk_v1_labels.txt ^
+    --image=tf_files/agent_desk_v1/notworking_compliantdesk/DSC_1018.JPG
+
+python -m scripts.label_image ^
+    --graph=tf_files/agent_desk_v1_graph.pb  ^
+    --labels=tf_files/agent_desk_v1_labels.txt ^
+    --image=tf_files/agent_desk_v1/working_noncompliantdesk/DSC_1034.JPG
+
+python -m scripts.label_image ^
+    --graph=tf_files/agent_desk_v1_graph.pb  ^
+    --labels=tf_files/agent_desk_v1_labels.txt ^
+    --image="C:\source\ML\test_files\WP_20171121_006.jpg"
+
+python label_image.py ^
+    --graph=tf_files/agent_desk_v1_graph.pb  ^
+    --labels=tf_files/agent_desk_v1_labels.txt ^
+    --image="C:\source\ML\test_files\WP_20171121_006.jpg"
+
+
+
+python -m scripts.label_image ^
+    --graph=tf_files/agent_desk_v1_graph.pb  ^
+    --labels=tf_files/agent_desk_v1_labels.txt ^
+    --image="C:\source\ML\DSC_1121.JPG
+
+
+DSC_1116.JPG
+notworking noncompliantdesk 0.600537
+notworking compliantdesk 0.203061
+working compliantdesk 0.192026
+working noncompliantdesk 0.00437482
+
+
+DSC_1117.JPG*
+notworking noncompliantdesk 0.838753
+notworking compliantdesk 0.154764
+
+DSC_1118.JPG*
+notworking noncompliantdesk 0.993473
+notworking compliantdesk 0.00652395
+
+DSC_1119.JPG*
+notworking noncompliantdesk 0.995142
+notworking compliantdesk 0.00470544
+
+DSC_1120.JPG*
+working compliantdesk 0.998092
+notworking noncompliantdesk 0.00113063
+
+DSC_1121.JPG*
+working compliantdesk 0.793861
+notworking noncompliantdesk 0.203352

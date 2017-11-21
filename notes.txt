@@ -56,3 +56,15 @@ select count(payroll) from emp_organization where (regexp_like (station,'^009[0-
 and upper(class) not in ('Z','Y')
 
 
+
+##########################################################
+
+17-NOV-2017
+
+1. experiment with the driver images to generate new set of images for variational autoencoding
+code -> https://github.com/bluebelmont/Variational-Autoencoder/blob/master/Variational%20Autoencoder.ipynb
+https://github.com/hwalsuklee/tensorflow-mnist-VAE
+
+
+2. Start with the basics of neural networks and code from scratch.
+
